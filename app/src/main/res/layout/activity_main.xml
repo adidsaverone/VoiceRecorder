@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a1a">
+
+    <!-- App title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Voice Notes"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Result card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardResult"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tvTitle"
+        android:layout_margin="24dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="#2d2d2d">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Tap to record"
+            android:textColor="#CCCCCC"
+            android:textDirection="rtl"
+            android:padding="16dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Buttons container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardResult"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Record button -->
+        <Button
+            android:id="@+id/btnRecord"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:text="🎤"
+            android:textSize="48sp"
+            android:background="@drawable/circle_button"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Action buttons row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="WhatsApp"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#25D366"/>
+
+            <Button
+                android:id="@+id/btnDocs"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Docs"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#4285F4"/>
+
+            <Button
+                android:id="@+id/btnNotes"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Notes"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FFA000"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
